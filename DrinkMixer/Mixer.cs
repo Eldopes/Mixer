@@ -8,10 +8,15 @@ namespace DrinkMixer
 {
     class Mixer
     {
-        public int Mix(int Drink, List<int> Additions)
+        public static int Mix(int DrinkID, List<int> AdditionIDs)
         {
-            int cost = 1;
-            return cost;
+            Drink_Storage drinks = new Drink_Storage();
+            Addition_Storage additions  = new Addition_Storage();
+            int drinkPrice = drinks.GetPrice(DrinkID);
+            int additionPrice = 0;
+            foreach (var id in AdditionIDs)            
+                additionPrice += additions.GetPrice(id);
+            return drinkPrice + additionPrice; 
         }
-    }
+    }      
 }
