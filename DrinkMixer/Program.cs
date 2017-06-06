@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DrinkMixer
 {
@@ -27,7 +25,7 @@ namespace DrinkMixer
             }
             catch(KeyNotFoundException e)
             {
-                Console.WriteLine("No product with such index"); // если напитка или добавки с таким ID не существует
+                Console.WriteLine("Wrong drink or addition index"); // если напитка или добавки с таким ID не существует
                 Console.WriteLine(e.Message);
             }
 
