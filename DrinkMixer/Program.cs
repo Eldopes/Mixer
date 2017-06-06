@@ -10,10 +10,10 @@ namespace DrinkMixer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter drink ID");
+            Console.WriteLine("Enter drink ID"); // Ввод ID напитка
             int DrinkID = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter Addition IDs");
+            Console.WriteLine("Enter Addition IDs"); // Ввод ID добавки
             
             try
             {
@@ -29,7 +29,9 @@ namespace DrinkMixer
             {
                 Console.WriteLine("No product with such index"); // если напитка или добавки с таким ID не существует
                 Console.WriteLine(e.Message);
-            }                  
+            }
+
+            Console.ReadLine();                 
         }
     } 
 }
