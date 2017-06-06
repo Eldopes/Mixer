@@ -33,7 +33,7 @@ namespace DrinkMixer
 
         public override int GetPrice(int ID) // добавляет нужную добавку по ID
         {          
-                return Additions[ID]; 
+            return Additions[ID]; 
         }
     }
 }
